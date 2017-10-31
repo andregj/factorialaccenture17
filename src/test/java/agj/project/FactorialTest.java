@@ -46,11 +46,11 @@ public class FactorialTest {
 		assertEquals(expectedValue, result);
 	}
 
-	@Test
-	public void shouldFactoralOffourReturnTwentyfour() {
+	@Test (expected =RuntimeException.class)
+	public void shouldFactoralOfNegativeRaiseException() {
 
-		long result = factorial.compute(4);
-		long expectedValue = 24;
-		assertEquals(expectedValue, result);
+		factorial.compute(-1);
 	}
+	
+	
 }
